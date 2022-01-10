@@ -4,12 +4,17 @@ from kivymd.uix.label import MDLabel
 
 
 class CanteenApp(MDApp):
-    
-    _owner_mesazze = "Jaldi Jaldi Khana Bamao Tumhari Maka Chodon 😙"
+
+    # Friendly mesazze from none other than the owner itself 😲
+    _owner_mesazze = "Jaldi Jaldi Khana Banao Tumhari Maka Chodon 😙"
 
     def build(self):
+        # Theming
         self.theme_cls.theme_style = "Dark"  # Dark theme for app
-        
+        self.theme_cls.primary_palette = "Purple"
+        self.theme_cls.primary_hue = "300"
+
+        # Initialise and add widget to screen
         screen = MDScreen()
         screen.add_widget(
             MDLabel(
@@ -17,5 +22,5 @@ class CanteenApp(MDApp):
                 halign="center")
         )
 
-
-CanteenApp().run()
+if __name__ == '__main__':
+    CanteenApp().run()
